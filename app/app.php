@@ -21,9 +21,17 @@
   $app->post("/count", function () use ($app) {
     $new_count = new RepeatCounter($_POST['word'], $_POST['sentence']);
     $new_count->save();
-    return $app['twig']->render('result.html.twig', array('result'=>RepeatCounter::getAll()));
+    return $app['twig']->render('result.html.twig', array('results'=>RepeatCounter::getAll()));
   });
 
+  $app->post("/goback", function () use ($app) {
+    return $app['twig']->render('index.html.twig');
+  });
+
+  $app->post("/delete", function () use ($app) {
+    RepeatCounter::deleteAll();
+    return $app['twig']->render('index.html.twig');
+  });
 
   return $app;
 ?>

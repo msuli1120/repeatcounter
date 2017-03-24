@@ -32,5 +32,8 @@
       return $_SESSION['lists'];
     }
 
+    static function deleteAll() {
+      session_destroy();
+    }
   }
 ?>
