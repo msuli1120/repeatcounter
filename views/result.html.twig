@@ -1,18 +1,19 @@
 {% include 'header.html.twig' %}
   {% if results is not empty %}
-    <h3>Result</h3>
+    <h3>Results</h3>
     {% for result in results %}
       <li>Word you checked: {{ result.user_word }} </li>
       <li>In sentence: {{ result.user_sentence }} </li>
       <li>Repeat times: {{ result.countRepeats }} </li>
+      <br>
     {% endfor %}
 
     <form action="/goback" method="post">
-      <button type="submit" class="btn bg-warning">Go back</button>
+      <button type="submit" class="btn bg-warning" id="back"><=Go back</button>
     </form>
 
     <form action="/delete" method="post">
-      <button type="submit" class="btn bg-danger">Delete All</button>
+      <button type="submit" class="btn bg-danger" id="delete">Delete All</button>
     </form>
 
   {% endif %}

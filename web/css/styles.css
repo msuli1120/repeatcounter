@@ -29,5 +29,9 @@ h3 {
 
 li {
   color: white;
+}
 
+button#delete {
+  float: right;
+  margin-top: -3%;
 }
