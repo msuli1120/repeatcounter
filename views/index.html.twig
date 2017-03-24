@@ -1,0 +1,13 @@
+{% include 'header.html.twig' %}
+  <form action="/count" method="post">
+    <div class="form-group">
+      <label for="word">Enter the word that you want check</label>
+      <input id="word" name="word" type="text" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="sentence">Enter the sentence</label>
+      <input id="sentence" name="sentence" type="text" class="form-control">
+    </div>
+    <button class="btn bg-primary" type="submit">Count!</button>
+  </form>
+{% include 'footer.html.twig' %}

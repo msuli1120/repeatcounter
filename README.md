@@ -27,7 +27,7 @@ _a website in Silex that returns how frequently a word appears in a given string
   2. _output: b_
 * _compare the two inputs and return the result_
   1. _output: false_
-* _above just for trying out the program can compare 2 letters_
+* _above just for trying out the program can compare 2 letters, single letter is always easy from the start_
 ***************************************************************************
 * _start to take in two 2-letter words_
   1. _program split the words to single letters_
@@ -36,7 +36,7 @@ _a website in Silex that returns how frequently a word appears in a given string
   2. _compare each letter to see if there is a match_
     * _input: h i , h a_
     * _output: h_
-* _above for trying out the program can filter the same letter out and return it_
+* _above for trying out the program can filter the same letter out and return it, start to make it little complicate_
 ****************************************************************************
 * _start to try taking in 3-letter words_
   1. _program split the words to single letters for the both 3-letter-word_
@@ -61,6 +61,7 @@ _a website in Silex that returns how frequently a word appears in a given string
     * _input: hi_
     * _output: 1_
 * _above for a word in a sentence_
+* _refactor the code_
 
 
 [click here](https://github.com/msuli1120/repeatcounter.git) to check out the project

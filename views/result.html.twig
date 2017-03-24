@@ -1,0 +1,8 @@
+{% include 'header.html.twig' %}
+  {% if result is not empty %}
+    <h3>Result</h3>
+      <li>Word you checked: {{ result.user_word }} </li>
+      <li>In sentence: {{ result.user_sentence }} </li>
+      <li>Times: {{ result.countRepeats }} </li>
+  {% endif %}
+{% include 'footer.html.twig' %}
