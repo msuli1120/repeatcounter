@@ -11,8 +11,10 @@
 
     function countRepeats () {
       $non_letters_array = array ('"', '\'', '!', '.', ',', '@', '#', '$', '%', '^', '&', '*', '(', ')', ':', ';', '<', '>', '?', '/', '|', '~', '`');
-      $filter_word = str_replace($non_letters_array, ' ', $this->user_word);
-      $filter_sentence = str_replace($non_letters_array, ' ', $this->user_sentence);
+      $slash_word = stripslashes($this->user_word);
+      $slash_sentence = stripslashes($this->user_sentence);
+      $filter_word = str_replace($non_letters_array, ' ', $slash_word);
+      $filter_sentence = str_replace($non_letters_array, ' ', $slash_sentence);
       $word = strtolower($filter_word);
       $sentence = strtolower($filter_sentence);
       $output_array = array () ;
