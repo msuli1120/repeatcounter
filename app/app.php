@@ -34,7 +34,7 @@
 
   $app->post("/delete", function () use ($app) {
     RepeatCounter::deleteAll();
-    return $app['twig']->render('index.html.twig');
+    return $app['twig']->render('result.html.twig');
   });
 
   return $app;
