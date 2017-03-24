@@ -34,4 +34,9 @@ li {
 button#delete {
   float: right;
   margin-top: -3%;
+  color: red;
+}
+
+button#back {
+  color: green;
 }
