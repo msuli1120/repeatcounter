@@ -1,7 +1,7 @@
 {% include 'header.html.twig' %}
   {% if results is not empty %}
+    <h3>Result</h3>
     {% for result in results %}
-      <h3>Result</h3>
       <li>Word you checked: {{ result.user_word }} </li>
       <li>In sentence: {{ result.user_sentence }} </li>
       <li>Repeat times: {{ result.countRepeats }} </li>
