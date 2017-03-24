@@ -19,9 +19,13 @@
   });
 
   $app->post("/count", function () use ($app) {
-    $new_count = new RepeatCounter($_POST['word'], $_POST['sentence']);
-    $new_count->save();
-    return $app['twig']->render('result.html.twig', array('results'=>RepeatCounter::getAll()));
+    if(empty($_POST['word']) || empty($_POST['sentence'])) {
+      return $app['twig']->render('erro.html.twig');
+    } else {
+      $new_count = new RepeatCounter($_POST['word'], $_POST['sentence']);
+      $new_count->save();
+      return $app['twig']->render('result.html.twig', array('results'=>RepeatCounter::getAll()));
+    }
   });
 
   $app->post("/goback", function () use ($app) {

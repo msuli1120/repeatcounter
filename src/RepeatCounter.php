@@ -10,8 +10,11 @@
     }
 
     function countRepeats () {
-      $word = strtolower($this->user_word);
-      $sentence = strtolower($this->user_sentence);
+      $non_letters_array = array ('"', '\'', '!', '.', ',', '@', '#', '$', '%', '^', '&', '*', '(', ')', ':', ';', '<', '>', '?', '/', '|', '~', '`');
+      $filter_word = str_replace($non_letters_array, ' ', $this->user_word);
+      $filter_sentence = str_replace($non_letters_array, ' ', $this->user_sentence);
+      $word = strtolower($filter_word);
+      $sentence = strtolower($filter_sentence);
       $output_array = array () ;
 
       $words_array = explode(' ', $sentence);
