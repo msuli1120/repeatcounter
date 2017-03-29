@@ -4,9 +4,9 @@
   class RepeatCounterTest extends PHPUnit_Framework_TestCase {
     function testRepeatCounterOneWord () {
       //Arrange
-      $test_repeatcounter = new RepeatCounter;
       $input_word = "hi";
       $input_sentence = "hi";
+      $test_repeatcounter = new RepeatCounter($input_word, $input_sentence);
       //Act
       $result = $test_repeatcounter->countRepeats($input_word, $input_sentence);
       //Assert
@@ -14,9 +14,9 @@
     }
     function testRepeatCounterTwoWords () {
       //Arrange
-      $test_repeatcounter = new RepeatCounter;
       $input_word = "hi";
       $input_sentence = "hi there";
+      $test_repeatcounter = new RepeatCounter($input_word,$input_sentence);
       //Act
       $result = $test_repeatcounter->countRepeats($input_word, $input_sentence);
       //Assert
@@ -24,9 +24,9 @@
     }
     function testRepeatCounterInSentence () {
       //Arrange
-      $test_repeatcounter = new RepeatCounter;
       $input_word = "hi";
       $input_sentence = "hi there how are you";
+      $test_repeatcounter = new RepeatCounter($input_word,$input_sentence);
       //Act
       $result = $test_repeatcounter->countRepeats($input_word, $input_sentence);
       //Assert
@@ -34,9 +34,9 @@
     }
     function testRepeatCounterMultipleRepeat () {
       //Arrange
-      $test_repeatcounter = new RepeatCounter;
       $input_word = "hi";
       $input_sentence = "hi there how are you, hi you, hi";
+      $test_repeatcounter = new RepeatCounter($input_word,$input_sentence);
       //Act
       $result = $test_repeatcounter->countRepeats($input_word, $input_sentence);
       //Assert
@@ -44,9 +44,9 @@
     }
     function testRepeatCounterForNumber () {
       //Arrange
-      $test_repeatcounter = new RepeatCounter;
       $input_word = "1";
       $input_sentence = "hi there how are you, hi you, 1";
+      $test_repeatcounter = new RepeatCounter($input_word,$input_sentence);
       //Act
       $result = $test_repeatcounter->countRepeats($input_word, $input_sentence);
       //Assert
